@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07 浏览记录页 · 城市记忆盲盒线框</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#e9e9e9;color:#111;font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;display:flex;flex-direction:column;align-items:center;padding:34px 16px 60px;min-height:100vh}
+.page-tag{font-size:13px;color:#888;letter-spacing:2px;margin-bottom:14px}
+.page-tag b{color:#111;font-size:15px}
+.phone{width:390px;max-width:100%;background:#fff;border:2px solid #111;border-radius:28px;padding:26px 22px 22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 12px 32px rgba(0,0,0,.10)}
+.topbar{display:flex;align-items:center;gap:12px}
+.back{width:34px;height:34px;flex:0 0 34px;border:1.5px solid #111;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
+.title{font-size:17px;font-weight:700}
+.spacer{flex:1}
+.chip{border:1.5px solid #111;border-radius:999px;font-size:12px;padding:5px 12px;color:#111}
+.chip.ghost{border-color:#9c9c9c;color:#777}
+.ph{border:1.5px dashed #9c9c9c;border-radius:12px;background:#fafafa;display:flex;align-items:center;justify-content:center;color:#8f8f8f;font-size:12px;position:relative;overflow:hidden;text-align:center}
+.ph::before,.ph::after{content:"";position:absolute;inset:0}
+.ph::before{background:linear-gradient(to top right,transparent calc(50% - .6px),#d6d6d6 calc(50% - .6px),#d6d6d6 calc(50% + .6px),transparent calc(50% + .6px))}
+.ph::after{background:linear-gradient(to top left,transparent calc(50% - .6px),#d6d6d6 calc(50% - .6px),#d6d6d6 calc(50% + .6px),transparent calc(50% + .6px))}
+.ph span{position:relative;z-index:1;padding:4px 6px}
+.bar{height:10px;border-radius:5px;background:#dcdcdc}
+.bar.d{background:#9c9c9c}
+.ic{width:26px;height:26px;border:1.5px solid #111;border-radius:50%;flex:0 0 auto}
+.pager{margin-top:18px;display:flex;gap:20px;font-size:13px}
+.pager a{color:#555;text-decoration:none;border-bottom:1px solid #aaa;padding-bottom:2px}
+.tabbar{display:flex;border:1.5px solid #111;border-radius:999px;padding:9px 8px;margin-top:auto}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;color:#888}
+.tab .ic{width:20px;height:20px}
+.tab.active{color:#111;font-weight:700}
+.tab.active .ic{background:#111}
+.rec{display:flex;align-items:center;gap:12px;border:1.5px solid #111;border-radius:12px;padding:10px 12px}
+.rec .ph{width:48px;height:48px;flex:0 0 48px;border-radius:8px}
+.meta{flex:1;display:flex;flex-direction:column;gap:7px}
+.chev{color:#aaa;font-size:18px}
+.date{font-size:12px;color:#9a9a9a;margin:2px 0 -4px 2px}
+</style>
+</head>
+<body>
+<div class="page-tag"><b>07</b>&nbsp;浏览记录页 · history.html</div>
+<div class="phone">
+  <div class="topbar"><div class="back">←</div><div class="title">浏览记录</div><div class="spacer"></div><span class="chip ghost">按时间倒序</span></div>
+
+  <div class="date">今天</div>
+  <div class="rec">
+    <div class="ph"><span>图</span></div>
+    <div class="meta"><div class="bar" style="width:62%"></div><div class="bar" style="width:38%;height:8px"></div></div>
+    <span class="chip" style="font-size:11px">已收藏</span><span class="chev">›</span>
+  </div>
+  <div class="rec">
+    <div class="ph"><span>图</span></div>
+    <div class="meta"><div class="bar" style="width:52%"></div><div class="bar" style="width:34%;height:8px"></div></div>
+    <span class="chev">›</span>
+  </div>
+  <div class="rec">
+    <div class="ph"><span>图</span></div>
+    <div class="meta"><div class="bar" style="width:58%"></div><div class="bar" style="width:30%;height:8px"></div></div>
+    <span class="chev">›</span>
+  </div>
+
+  <div class="date">更早</div>
+  <div class="rec">
+    <div class="ph"><span>图</span></div>
+    <div class="meta"><div class="bar" style="width:48%"></div><div class="bar" style="width:36%;height:8px"></div></div>
+    <span class="chev">›</span>
+  </div>
+  <div class="rec">
+    <div class="ph"><span>图</span></div>
+    <div class="meta"><div class="bar" style="width:56%"></div><div class="bar" style="width:32%;height:8px"></div></div>
+    <span class="chev">›</span>
+  </div>
+  <div class="rec">
+    <div class="ph"><span>图</span></div>
+    <div class="meta"><div class="bar" style="width:44%"></div><div class="bar" style="width:28%;height:8px"></div></div>
+    <span class="chev">›</span>
+  </div>
+
+  <div class="tabbar">
+    <div class="tab"><div class="ic"></div>首页</div>
+    <div class="tab"><div class="ic"></div>图鉴</div>
+    <div class="tab active"><div class="ic"></div>记录</div>
+    <div class="tab"><div class="ic"></div>我的</div>
+  </div>
+</div>
+<nav class="pager"><a href="06-collection.html">‹ 上一页</a><a href="index.html">总览</a><a href="08-card.html">下一页：纪念卡页 ›</a></nav>
+</body>
+</html>

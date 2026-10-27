@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 首页 · 城市记忆盲盒线框</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#e9e9e9;color:#111;font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;display:flex;flex-direction:column;align-items:center;padding:34px 16px 60px;min-height:100vh}
+.page-tag{font-size:13px;color:#888;letter-spacing:2px;margin-bottom:14px}
+.page-tag b{color:#111;font-size:15px}
+.phone{width:390px;max-width:100%;background:#fff;border:2px solid #111;border-radius:28px;padding:26px 22px 22px;display:flex;flex-direction:column;gap:18px;box-shadow:0 12px 32px rgba(0,0,0,.10)}
+.topbar{display:flex;align-items:center;gap:12px}
+.spacer{flex:1}
+.chip{border:1.5px solid #111;border-radius:999px;font-size:12px;padding:5px 12px;color:#111}
+.chip.ghost{border-color:#9c9c9c;color:#777}
+.ph{border:1.5px dashed #9c9c9c;border-radius:12px;background:#fafafa;display:flex;align-items:center;justify-content:center;color:#8f8f8f;font-size:12px;position:relative;overflow:hidden;text-align:center}
+.ph::before,.ph::after{content:"";position:absolute;inset:0}
+.ph::before{background:linear-gradient(to top right,transparent calc(50% - .6px),#d6d6d6 calc(50% - .6px),#d6d6d6 calc(50% + .6px),transparent calc(50% + .6px))}
+.ph::after{background:linear-gradient(to top left,transparent calc(50% - .6px),#d6d6d6 calc(50% - .6px),#d6d6d6 calc(50% + .6px),transparent calc(50% + .6px))}
+.ph span{position:relative;z-index:1;padding:6px 10px}
+.box{border:1.5px solid #111;border-radius:14px}
+.bar{height:10px;border-radius:5px;background:#dcdcdc}
+.bar.d{background:#9c9c9c}
+.btn{border:1.5px solid #111;border-radius:999px;padding:13px 0;text-align:center;font-size:15px;font-weight:600;background:#fff;color:#111}
+.btn.solid{background:#111;color:#fff}
+.ic{width:26px;height:26px;border:1.5px solid #111;border-radius:50%;flex:0 0 auto}
+.pager{margin-top:18px;display:flex;gap:20px;font-size:13px}
+.pager a{color:#555;text-decoration:none;border-bottom:1px solid #aaa;padding-bottom:2px}
+.tabbar{display:flex;border:1.5px solid #111;border-radius:999px;padding:9px 8px;margin-top:auto}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;color:#888}
+.tab .ic{width:20px;height:20px}
+.tab.active{color:#111;font-weight:700}
+.tab.active .ic{background:#111}
+.hero{border:1.5px solid #111;border-radius:16px;height:246px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.orb{width:112px;height:112px;border:2px dashed #888;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.tiles{display:flex;gap:10px}
+.tile{flex:1;border:1.5px solid #111;border-radius:12px;padding:13px 0;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12px}
+.rcard{flex:1;border:1.5px solid #111;border-radius:12px;padding:9px}
+</style>
+</head>
+<body>
+<div class="page-tag"><b>03</b>&nbsp;首页 · home.html</div>
+<div class="phone">
+  <div class="topbar">
+    <div class="ic" style="width:38px;height:38px"></div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:7px">
+      <div class="bar d" style="width:88px;height:9px"></div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="flex:1;height:6px;border:1px solid #999;border-radius:4px;overflow:hidden"><div style="width:25%;height:100%;background:#111"></div></div>
+        <span style="font-size:11px;color:#777">2/8</span>
+      </div>
+    </div>
+    <span class="chip">石家庄 ▾</span>
+  </div>
+
+  <div class="hero">
+    <div class="orb">
+      <svg viewBox="0 0 60 60" width="58" height="58" fill="none" stroke="#111" stroke-width="2">
+        <path d="M30 6 L52 19 L52 45 L30 58 L8 45 L8 19 Z"/>
+        <path d="M8 19 L30 32 L52 19 M30 32 L30 58"/>
+      </svg>
+    </div>
+    <div class="bar" style="width:46%"></div>
+    <div style="font-size:11px;color:#b3b3b3;letter-spacing:3px">盲盒舞台 · 光球动画区</div>
+  </div>
+
+  <div class="btn solid" style="border-radius:14px">抓取城市记忆盲盒</div>
+
+  <div class="tiles">
+    <div class="tile"><div class="ic"></div>图鉴</div>
+    <div class="tile"><div class="ic"></div>浏览记录</div>
+    <div class="tile"><div class="ic"></div>纪念卡</div>
+    <div class="tile"><div class="ic"></div>个人中心</div>
+  </div>
+
+  <div style="display:flex;align-items:center;margin-top:2px">
+    <div class="bar d" style="width:96px"></div><div class="spacer"></div>
+    <span style="font-size:12px;color:#999">更多 ›</span>
+  </div>
+  <div style="display:flex;gap:12px">
+    <div class="rcard">
+      <div class="ph" style="height:80px"><span>老物件图</span></div>
+      <div class="bar" style="width:72%;margin-top:9px"></div>
+      <div class="bar" style="width:42%;height:8px;margin-top:6px"></div>
+    </div>
+    <div class="rcard">
+      <div class="ph" style="height:80px"><span>老物件图</span></div>
+      <div class="bar" style="width:64%;margin-top:9px"></div>
+      <div class="bar" style="width:38%;height:8px;margin-top:6px"></div>
+    </div>
+  </div>
+
+  <div class="tabbar">
+    <div class="tab active"><div class="ic"></div>首页</div>
+    <div class="tab"><div class="ic"></div>图鉴</div>
+    <div class="tab"><div class="ic"></div>记录</div>
+    <div class="tab"><div class="ic"></div>我的</div>
+  </div>
+</div>
+<nav class="pager"><a href="02-location.html">‹ 上一页</a><a href="index.html">总览</a><a href="04-grab.html">下一页：手势抓取页 ›</a></nav>
+</body>
+</html>
